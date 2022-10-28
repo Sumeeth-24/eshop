@@ -51,12 +51,12 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 
 
 // DEVELOPMENT
-app.listen(3000, () => {
-    console.log('server is running on http://localhost:3000');
-})
+// app.listen(3000, () => {
+//     console.log('server is running on http://localhost:3000');
+// })
 
 // PRODUCTION
-// var server = app.listen(process.env.PORT || 3000, function (){
-//     var port = server.address().port;
-//     console.log("Express is working on port " + port)
-// })
+var server = app.listen(process.env.PORT || 3000, function (){
+    var port = server.address().port;
+    console.log("Express is working on port " + port)
+})
